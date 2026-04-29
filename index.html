@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Phone Knows You | Weboreel</title>
+    <meta name="description" content="A thoughtful analysis of your digital habits." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <!-- UI Controls -->
+      <div class="ui-controls">
+        <button id="sound-toggle" title="Toggle Sound">
+          <i data-lucide="volume-x" id="sound-icon"></i>
+          <span>Tap for Sound</span>
+        </button>
+      </div>
+
+      <div class="scroll-progress"></div>
+      <div class="scanner-focus"></div>
+      
+      <!-- Background Decorative Elements -->
+      <div class="bg-gradient"></div>
+      <div class="soft-blob blob-1"></div>
+      <div class="soft-blob blob-2"></div>
+
+      <main id="main-container">
+        <!-- Section 1: Hero -->
+        <section id="hero" class="v-section">
+          <div class="hero-content">
+            <h1 class="fade-in">YOUR PHONE KNOWS YOU</h1>
+            <p class="subtitle fade-in">Not everything you do is intentional.</p>
+            <div class="scroll-hint fade-in">
+              <span class="dot"></span>
+              <span>Scroll to Begin Scan</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2: Scanning Simulation (Phase 1) -->
+        <section id="scan-logs" class="v-section">
+          <div class="log-wrapper">
+            <div class="section-label">ANALYSIS IN PROGRESS</div>
+            <div class="log-container" id="log-container">
+              <!-- Logs injected here -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3: Questions (Phase 2) -->
+        <section id="questions" class="v-section">
+          <div class="question-wrapper">
+            <!-- Question 1 -->
+            <div class="question-card holographic" id="q-1">
+              <div class="tech-corners"></div>
+              <span class="q-step">01 / 04 <span class="meta">// ID: 0x2A1</span></span>
+              <h2>How often do you check your phone without realizing?</h2>
+              <div class="options">
+                <button class="opt-btn" data-val="rarely">Rarely</button>
+                <button class="opt-btn" data-val="sometimes">Sometimes</button>
+                <button class="opt-btn" data-val="often">Often</button>
+                <button class="opt-btn" data-val="constantly">Constantly</button>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-card inactive holographic" id="q-2">
+              <div class="tech-corners"></div>
+              <span class="q-step">02 / 04 <span class="meta">// ID: 0x4B2</span></span>
+              <h2>Do you open apps without knowing why?</h2>
+              <div class="options">
+                <button class="opt-btn" data-val="no">No</button>
+                <button class="opt-btn" data-val="sometimes">Sometimes</button>
+                <button class="opt-btn" data-val="yes">Yes</button>
+                <button class="opt-btn" data-val="always">All the time</button>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-card inactive holographic" id="q-3">
+              <div class="tech-corners"></div>
+              <span class="q-step">03 / 04 <span class="meta">// ID: 0x9C3</span></span>
+              <h2>Your screen time feels like:</h2>
+              <div class="options">
+                <button class="opt-btn" data-val="controlled">Under control</button>
+                <button class="opt-btn" data-val="manageable">Manageable</button>
+                <button class="opt-btn" data-val="worrying">Slightly worrying</button>
+                <button class="opt-btn" data-val="concerning">Concerning</button>
+              </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-card inactive holographic" id="q-4">
+              <div class="tech-corners"></div>
+              <span class="q-step">04 / 04 <span class="meta">// ID: 0xF14</span></span>
+              <h2>Most of your phone time is:</h2>
+              <div class="options">
+                <button class="opt-btn" data-val="productive">Productive</button>
+                <button class="opt-btn" data-val="communication">Communication</button>
+                <button class="opt-btn" data-val="content">Content Consumption</button>
+                <button class="opt-btn" data-val="random">Random Scrolling</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 4: Analysis Build (Phase 3) -->
+        <section id="analysis" class="v-section">
+          <div class="analysis-content">
+            <div class="progress-container">
+              <svg viewBox="0 0 100 100">
+                <circle class="bg" cx="50" cy="50" r="45"></circle>
+                <circle class="fg" cx="50" cy="50" r="45" id="progress-circle"></circle>
+              </svg>
+              <div class="percent-label" id="percent">0%</div>
+            </div>
+            <div class="status-msg" id="analysis-step">Identifying behavioral patterns...</div>
+          </div>
+        </section>
+
+        <!-- Section 5: Insight Reveal (Phase 4) -->
+        <section id="results" class="v-section">
+          <div class="results-header">
+            <h2 class="playfair">The Mirror</h2>
+            <p>What the data suggests about your rhythm.</p>
+          </div>
+          
+          <div class="results-grid" id="results-grid">
+            <!-- Result cards injected here -->
+          </div>
+
+          <div class="final-cta">
+            <h2 class="playfair">Your phone knows your patterns.</h2>
+            <p>The real question is — will you change them?</p>
+            <div class="cta-btns">
+              <button id="run-again" class="btn-primary">Try Again</button>
+              <button id="share-btn" class="btn-secondary">Share Result</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
